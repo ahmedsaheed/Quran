@@ -29,7 +29,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: Align(
                       alignment: Alignment.topLeft,
                       child: Text(
-                        'Quran',
+                        'AL-Quran',
                         style: GoogleFonts.hammersmithOne(
                           textStyle: TextStyle(
                             color: Colors.white,
@@ -49,7 +49,19 @@ class _HomeScreenState extends State<HomeScreen> {
                 onSubmitted: (String value) {
                   print(value);
                 },
-              )
+              ),
+              SizedBox(height: getProportionateScreenHeight(5)),
+              Text(
+                "القرآن الكريم",
+                style: GoogleFonts.amiri(
+                  textStyle: TextStyle(
+                    color: Colors.white,
+                    letterSpacing: .5,
+                    fontWeight: FontWeight.bold,
+                    fontSize: getProportionateScreenWidth(25),
+                  ),
+                ),
+              ),
             ]))));
   }
 }
